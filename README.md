@@ -1,4 +1,3 @@
-# DiffFound
+# DiffFound: Towards a Universal Foundation Model for Diffusion MRI Computing
 
-《DiffFound: Towards a Universal Foundation Model for Diffusion MRI Computing》 (Under Review)  
-The code in this repository will be publicly released upon formal acceptance of the paper.  
+Code will be publicly released upon the acceptance of the paper.  
