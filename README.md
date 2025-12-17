@@ -7,12 +7,12 @@ Official implementation code for DiffFound, a novel universal foundation model f
 ***
 ## 📋 Model overview
 <div style="text-align: center">
-  <img src="figures/difffound.png" width="100%" alt="BrainSeg Framework">
+  <img src="figures/difffound.png" width="100%" alt="DiffFound Framework">
 </div>
 
 ## 📊 Dataset Information
 <div style="text-align: center">
-  <img src="figures/dataset.png" width="100%" alt="BrainSeg Framework">
+  <img src="figures/dataset.png" width="100%" alt="DiffFound Framework">
 </div>
 
 ## 📈 Results
@@ -25,11 +25,11 @@ Official implementation code for DiffFound, a novel universal foundation model f
 To ensure a clean workspace and prevent dependency conflicts, we strongly recommend creating a new Conda environment before running the code.
 ## 1. Create and Activate Environment
 ```bash
-# Create a new conda environment named 'brainseg' with Python 3.9
-conda create -n diffound python=3.8 -y
+# Create a new conda environment named 'difffound' with Python 3.8
+conda create -n difffound python=3.8 -y
 
 # Activate the environment
-conda activate diffound
+conda activate difffound
 
 # Install the required libraries
 pip install -r requirements.txt
@@ -89,7 +89,7 @@ python launcher_pretrain.py
 │   ├── ……              
 └── ……
 ```
-2. Create input text file and write the full path of each data file line by line.\
+2. Create an input text file and write the full path of each data file line by line.\
 For Training Data:\
 Input Data List (data_list.txt): Contains paths to your training input files.\
 Ground Truth List (gt_list.txt): Contains corresponding ground truth file paths.\
@@ -121,9 +121,9 @@ Ensure corresponding files maintain the same order in both training and testing 
   test_data_path:  "path/to/your/test_data_list.txt"
   test_data_gt_path: "path/to/your/test_gt_list.txt"
   mask_data_path: #mask data path
-  mask_name: #mask data name eg: mask.nii.gz
+  mask_name: #mask data name, eg, mask.nii.gz
 ```
-4. Now you can start finetune super resolution, microstructure estimation, fiber orientation distribution function reconstruction, and tract segmentation tasks.
+4. Now you can start finetuning super resolution, microstructure estimation, fiber orientation distribution function reconstruction, and tract segmentation tasks.
 
 ```bash
 python launcher_finetune_super_resolution.py
@@ -132,7 +132,7 @@ python launcher_finetune_fodf_estimation.py
 python launcher_finetune_tract_segmentation.py
 ```
 
-5. Now you can start test super resolution, microstructure estimation, fiber orientation distribution function reconstruction, and tract segmentation tasks (config file is the same as 3).
+5. Now you can start testing super resolution, microstructure estimation, fiber orientation distribution function reconstruction, and tract segmentation tasks (config file is the same as 3).
 
 ```bash
 python launcher_test_super_resolution.py
@@ -150,7 +150,7 @@ If you find this work useful in your research, please cite:
 This work was supported by the National Natural Science Foundation of China\
 We gratefully acknowledge the [LatentMIM](https://github.com/yibingwei-1/LatentMIM) codebase as the foundation of our implementation. 
 
-## 📧 Contact
+## 📧 Contacts
 For questions or suggestions, please contact:
 
 Haotian Jiang: jianghaotian@mail.nwpu.edu.cn\
