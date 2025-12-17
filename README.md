@@ -92,7 +92,7 @@ python launcher_pretrain.py
 2. Create input text file and write the full path of each data file line by line.
 For Training Data:
 Input Data List (data_list.txt): Contains paths to your training input files
-Ground Truth List (gt_list.txt): Contains corresponding ground truth file paths
+Ground Truth List (gt_list.txt): Contains corresponding ground truth file paths\
 Example data_list.txt:
 ```bash
 path/data/hcp_195950.npy
@@ -132,7 +132,7 @@ python launcher_finetune_fodf_estimation.py
 python launcher_finetune_tract_segmentation.py
 ```
 
-5. Now you can start test super resolution, microstructure estimation, fiber orientation distribution function reconstruction, and tract segmentation tasks (config file is the same as 3.).
+5. Now you can start test super resolution, microstructure estimation, fiber orientation distribution function reconstruction, and tract segmentation tasks (config file is the same as 3).
 
 ```bash
 python launcher_test_super_resolution.py
