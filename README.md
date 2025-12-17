@@ -69,7 +69,7 @@ python launcher_pretrain.py
 
 ## ⚙️ Step 2: fine-tuning 
 
-1. You can organize your file directory as follows to train DiffFound on your own data
+1. You can organize your file directory as follows to train DiffFound on your own data.
 
 ```bash
 ├── data/
@@ -90,9 +90,9 @@ python launcher_pretrain.py
 └── ……
 ```
 2. Create input text file and write the full path of each data file line by line.
-For Training Data:
-Input Data List (data_list.txt): Contains paths to your training input files
-Ground Truth List (gt_list.txt): Contains corresponding ground truth file paths\
+For Training Data:\
+Input Data List (data_list.txt): Contains paths to your training input files.\
+Ground Truth List (gt_list.txt): Contains corresponding ground truth file paths.\
 Example data_list.txt:
 ```bash
 path/data/hcp_195950.npy
