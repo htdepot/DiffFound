@@ -1,0 +1,27 @@
+# Logging frequency
+print_freq: 20
+save_freq: 10
+eval_freq: 5
+debug: False
+
+# Paths
+ckpt_dir: ${output_dir}/${job_name}/checkpoints/
+submitit_dir: ${output_dir}/${job_name}/logs/
+result_dir: ${output_dir}/${job_name}/results/
+suffix: ''
+
+# Logging
+#use_wandb: True
+#wandb_dir: ${output_dir}/${job_name}/wandb/
+#wandb_entity:
+#wandb_project: lmim
+#wandb_watch_freq: 0
+#ckpt_save_list: []
+
+rank: 0
+use_wandb: False
+proj_name: 'dmae_vit_pretrain'
+dataset: 'all'
+run_name: 'lmae_vitbase_pretrain_p16_b2_96_96_96'
+wandb_id:
+output_dir: '/data/userdisk1/jht/pretrain_output/lmae_vitbase_pretrain_p16_b2_96_96_96'

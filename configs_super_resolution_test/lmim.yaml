@@ -1,0 +1,73 @@
+defaults:
+  - hydra: default
+  - env: default
+  - log: default
+
+worker: main_difffound_test_fodf_estimation
+output_dir: #output path
+job_name: DiffFound
+dataset: Diff10K
+
+data_path: #train data path
+data_gt_path: #train gt data path
+
+test_data_path:  #test data path
+test_data_gt_path: #test gt data path
+
+mask_data_path: #mask data path
+mask_name: #mask data name
+
+encoder: vit_base
+patch_size: 16
+decoder_depth: 3
+target_depth: 3
+target_mom: 0.99
+target_update_freq: 1
+loss: infonce_patches
+tau: 0.2
+use_proj: False
+
+drop: 0.
+attn_drop: 0.
+drop_path: 0.
+
+input_size: 48
+
+
+min_crop: 0.2
+
+grid_size: 3
+
+
+num_vis: 16
+mask_ratio: 0.75
+patch_gap: 0
+avg_vis_mask_token: True
+avg_sim_coeff: 0.1
+sim_init: 0.75
+sim_end: 0.25
+mask_target: True
+freeze_pe: True
+
+proj:
+  mlp_dim: 4096
+  mlp_depth: 3
+
+epochs: 50
+warmup_epochs: 10
+start_epoch: 0
+batch_size: 2
+weight_decay: 0.05
+blr:
+accum_iter: 1
+lr: 1e-4
+min_lr_frac: 0.2
+resume:
+finetune:
+test: # finetune model path
+test_para_path:
+knn_eval_only: False
+eval_freq: 50
+save_images: False
+
+

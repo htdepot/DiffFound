@@ -1,0 +1,20 @@
+# Logging frequency
+print_freq: 40
+save_freq: 40
+eval_freq: 40
+debug: False
+
+# Paths
+ckpt_dir: ${output_dir}/${job_name}/checkpoints/
+submitit_dir: ${output_dir}/${job_name}/logs/
+result_dir: ${output_dir}/${job_name}/results/
+suffix: ''
+
+# Logging
+rank: 0
+use_wandb: False
+proj_name: ''
+dataset: ''
+run_name: ''
+wandb_id:
+output_dir: ''

@@ -1,0 +1,56 @@
+defaults:
+  - hydra: default
+  - env: default
+  - log: default
+
+worker: main_difffound_pretrain
+output_dir:  #output path
+job_name: dmae
+dataset: all
+
+data_path: #data path file /home/jht/dmae/npy_file_paths.txt
+
+encoder: vit_base
+patch_size: 16
+decoder_depth: 3
+target_depth: 3
+target_mom: 0.99
+target_update_freq: 1
+loss: infonce_patches
+tau: 0.2
+use_proj: False
+
+drop: 0.
+attn_drop: 0.
+drop_path: 0.
+
+input_size: 96
+min_crop: 0.2
+grid_size: 6
+num_vis: 22
+mask_ratio: 0.90
+patch_gap: 0
+avg_vis_mask_token: True # initialize the mask token with postion-weighted visible
+avg_sim_coeff: 0.1
+sim_init: 0.75
+sim_end: 0.25
+mask_target: True
+freeze_pe: True
+
+proj:
+  mlp_dim: 4096
+  mlp_depth: 3
+
+epochs: 100
+warmup_epochs: 40
+start_epoch: 0
+batch_size: 2
+weight_decay: 0.05
+blr: 1.5e-4
+accum_iter: 8
+lr:
+min_lr_frac: 0.2
+resume: False
+finetune:
+knn_eval_only: False
+eval_freq: 5
