@@ -89,7 +89,7 @@ python launcher_pretrain.py
 │   ├── ……              
 └── ……
 ```
-2. Create input text file and write the full path of each data file line by line.
+2. Create input text file and write the full path of each data file line by line.\
 For Training Data:\
 Input Data List (data_list.txt): Contains paths to your training input files.\
 Ground Truth List (gt_list.txt): Contains corresponding ground truth file paths.\
